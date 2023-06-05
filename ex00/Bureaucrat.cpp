@@ -6,7 +6,7 @@
 /*   By: zwong <zwong@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/05 13:15:56 by zwong             #+#    #+#             */
-/*   Updated: 2023/06/05 13:19:57 by zwong            ###   ########.fr       */
+/*   Updated: 2023/06/05 13:42:49 by zwong            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,11 +57,11 @@ int Bureaucrat::getGrade(void) const {
 }
 
 const char *Bureaucrat::GradeTooHighException::what() const throw() {
-  return "Just tried to promote grade, but not allowed. Grade too high!";
+  return "Nope, grade too high!";
 }
 
 const char *Bureaucrat::GradeTooLowException::what() const throw() {
-  return "Just tried to demote grade, but not allowed. Grade too low!";
+  return "Nope, grade too low!";
 }
 
 std::ostream &operator<<(std::ostream &out, const Bureaucrat &b) {
