@@ -6,7 +6,7 @@
 /*   By: zwong <zwong@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/05 13:15:56 by zwong             #+#    #+#             */
-/*   Updated: 2023/06/05 17:38:02 by zwong            ###   ########.fr       */
+/*   Updated: 2023/07/13 16:03:32 by zwong            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,8 +56,7 @@ void Bureaucrat::demoteGrade() {
 	std::cout << this->name_ << " was demoted to grade " << this->grade_ << std::endl;
 }
 
-// NEXT
-void Bureaucrat::signForm(Form &form) {
+void Bureaucrat::signForm(AForm &form) {
 	try {
 		form.beSigned(*this);
 	} catch (std::exception &err) {
@@ -65,6 +64,16 @@ void Bureaucrat::signForm(Form &form) {
 		return ;
 	}
 	std::cout << this->name_ << " signed " << form << std::endl;
+}
+
+void Bureaucrat::executeForm(AForm const &form) {
+	try {
+		form.execute(*this);
+	} catch (std::exception &err) {
+		std::cout << this->name_ << " couldn't execute " << form << " because " << err.what() << "." << std::endl;
+		return ;
+	}
+	std::cout << this->name_ << " executed " << form << std::endl;
 }
 
 const char *Bureaucrat::GradeTooHighException::what() const throw() {

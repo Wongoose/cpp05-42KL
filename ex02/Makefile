@@ -6,15 +6,15 @@
 #    By: zwong <zwong@student.42kl.edu.my>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/05/26 13:04:34 by zwong             #+#    #+#              #
-#    Updated: 2023/06/05 17:16:16 by zwong            ###   ########.fr        #
+#    Updated: 2023/07/13 16:00:46 by zwong            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = maggots
+NAME = forms
 CXX = c++
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 
-SRCS = 	main.cpp Bureaucrat.cpp Form.cpp
+SRCS = 	main.cpp Bureaucrat.cpp AForm.cpp ShrubberyCreationForm.cpp RobotomyRequestForm.cpp PresidentialPardonForm.cpp
 
 OBJS = $(SRCS:.cpp=.o)
 

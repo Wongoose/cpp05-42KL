@@ -6,6 +6,7 @@
 #include <iomanip>
 #include "Bureaucrat.hpp"
 
+#define RESET	"\e[0m"
 #define DEFAULT "\033[39m"
 #define BLACK "\033[30m"
 #define GREY "\033[90m"
@@ -40,8 +41,8 @@ class AForm {
 		// Setters
 
 		// Functions
-		virtual void run(Bureaucrat const &bureaucrat) const = 0; // Abstract class
 		void beSigned(const Bureaucrat &bureaucrat);
+		void execute(Bureaucrat const &bureaucrat) const;
 
 		// Exceptions - must use char *what()
 		class GradeTooHighException : public std::exception {
@@ -53,6 +54,14 @@ class AForm {
 			public:
 				virtual const char *what() const throw();
 		};
+
+		class FormNotSignedException : public std::exception {
+			public:
+				virtual const char *what() const throw();
+		};
+
+	protected:
+		virtual void execAction(void) const = 0;
 
 	private:
 		const std::string name_;

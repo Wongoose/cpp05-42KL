@@ -4,6 +4,7 @@
 #include <string>
 #include <iostream>
 #include <iomanip>
+#include <math.h>
 #include "AForm.hpp"
 
 #define DEFAULT "\033[39m"
@@ -16,7 +17,7 @@
 #define BLUE "\033[94m"
 #define MAGENTA "\033[35m"
 
-class RobotomyRequestForm : AForm {
+class RobotomyRequestForm : public AForm {
 	public:
 		// Constructors
 		RobotomyRequestForm();
@@ -35,8 +36,9 @@ class RobotomyRequestForm : AForm {
 		// Setters
 
 		// Functions
-		virtual void run(Bureaucrat const &bureaucrat) const;
+		void execAction(void) const;
 
 	private:
+		std::string target_;
 };
 #endif

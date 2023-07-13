@@ -16,7 +16,7 @@
 #define BLUE "\033[94m"
 #define MAGENTA "\033[35m"
 
-class PresidentialPardonForm : AForm {
+class PresidentialPardonForm : public AForm {
 	public:
 		// Constructors
 		PresidentialPardonForm();
@@ -28,15 +28,15 @@ class PresidentialPardonForm : AForm {
 
 		// Operators
 		PresidentialPardonForm &operator=(const PresidentialPardonForm &other);
-		void swap(PresidentialPardonForm &first, PresidentialPardonForm &second);
 
 		// Getters
 
 		// Setters
 
 		// Functions
-		virtual void run(Bureaucrat const &bureaucrat) const;
+		void execAction(void) const;
 
 	private:
+		std::string target_;
 };
 #endif

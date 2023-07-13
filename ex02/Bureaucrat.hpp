@@ -6,7 +6,7 @@
 /*   By: zwong <zwong@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/05 13:15:54 by zwong             #+#    #+#             */
-/*   Updated: 2023/06/06 17:25:43 by zwong            ###   ########.fr       */
+/*   Updated: 2023/07/13 15:46:22 by zwong            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 #include <string>
 #include <iostream>
 #include <iomanip>
-#include "Form.hpp"
+#include "AForm.hpp"
 
 #define DEFAULT "\033[39m"
 #define BLACK "\033[30m"
@@ -28,7 +28,7 @@
 #define BLUE "\033[94m"
 #define MAGENTA "\033[35m"
 
-class Form;
+class AForm;
 
 class Bureaucrat {
 	public:
@@ -52,7 +52,8 @@ class Bureaucrat {
 		void demoteGrade();
 
 		// Functions
-		void signForm(Form &form);
+		void signForm(AForm &form);
+		void executeForm(AForm const &form);
 
 		// Exceptions - must use char *what()
 		class GradeTooHighException : public std::exception {

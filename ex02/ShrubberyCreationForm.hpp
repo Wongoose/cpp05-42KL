@@ -4,6 +4,7 @@
 #include <string>
 #include <iostream>
 #include <iomanip>
+#include <fstream>
 #include "AForm.hpp"
 
 #define DEFAULT "\033[39m"
@@ -16,7 +17,7 @@
 #define BLUE "\033[94m"
 #define MAGENTA "\033[35m"
 
-class ShrubberyCreationForm : AForm {
+class ShrubberyCreationForm : public AForm {
 	public:
 		// Constructors
 		ShrubberyCreationForm();
@@ -28,15 +29,16 @@ class ShrubberyCreationForm : AForm {
 
 		// Operators
 		ShrubberyCreationForm &operator=(const ShrubberyCreationForm &other);
-		void swap(ShrubberyCreationForm &first, ShrubberyCreationForm &second);
 
 		// Getters
 
 		// Setters
 
 		// Functions
-		virtual void run(Bureaucrat const &bureaucrat) const;
+		void execAction(void) const;
 
 	private:
+		std::string target_;
+		static std::string const shrubbery_;
 };
 #endif
