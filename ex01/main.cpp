@@ -6,13 +6,14 @@
 /*   By: zwong <zwong@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/05 13:16:00 by zwong             #+#    #+#             */
-/*   Updated: 2023/06/05 17:51:12 by zwong            ###   ########.fr       */
+/*   Updated: 2023/07/13 14:16:56 by zwong            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
 #include "Form.hpp"
 
+// Learn how to compare attributes of 2 classes and call for signage in Bureaucrat and Form.
 int main(void) {
 	std::cout << RED << "----- TESTS INVALID FORM CREATION-----" << std::endl << std::endl;
 	try {
