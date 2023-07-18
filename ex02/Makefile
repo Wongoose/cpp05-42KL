@@ -6,7 +6,7 @@
 #    By: zwong <zwong@student.42kl.edu.my>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/05/26 13:04:34 by zwong             #+#    #+#              #
-#    Updated: 2023/07/13 16:00:46 by zwong            ###   ########.fr        #
+#    Updated: 2023/07/14 17:16:25 by zwong            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,5 +28,6 @@ clean :
 
 fclean : clean 
 	rm -rf $(NAME)
+	rm -rf *_shrubbery
 
 re : fclean all
