@@ -1,6 +1,7 @@
 .vscode
 *.o
 *.out
+*_shrubbery
 
 !Makefile
 !*.hpp
