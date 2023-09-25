@@ -6,7 +6,7 @@
 /*   By: zwong <zwong@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/05 13:15:54 by zwong             #+#    #+#             */
-/*   Updated: 2023/06/05 13:22:20 by zwong            ###   ########.fr       */
+/*   Updated: 2023/09/25 11:44:52 by zwong            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 #include <iostream>
 #include <iomanip>
 
-#define DEFAULT "\033[39m"
+#define RESET "\033[39m"
 #define BLACK "\033[30m"
 #define GREY "\033[90m"
 #define RED "\033[31m"
