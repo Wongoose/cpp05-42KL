@@ -6,7 +6,7 @@
 /*   By: zwong <zwong@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/13 15:55:14 by zwong             #+#    #+#             */
-/*   Updated: 2023/07/18 16:54:05 by zwong            ###   ########.fr       */
+/*   Updated: 2023/09/25 15:18:04 by zwong            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,9 @@ void sign_and_exec(AForm *form) {
 	highPriest.executeForm(*form);
 }
 
-// Creating Derived Forms from AForm. Execution checking done in AForm.
+// Interns, they make forms by keyword
+// Using a list of function pointers, matched by keyword
+// Has new CatchException for invalid form (can't find keyword)
 int	main(void)
 {
 	std::cout << std::endl;
