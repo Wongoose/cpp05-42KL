@@ -6,7 +6,7 @@
 /*   By: zwong <zwong@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/05 13:15:54 by zwong             #+#    #+#             */
-/*   Updated: 2023/07/13 15:46:22 by zwong            ###   ########.fr       */
+/*   Updated: 2023/09/25 15:02:43 by zwong            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,7 @@ class Bureaucrat {
 
 		// Functions
 		void signForm(AForm &form);
-		void executeForm(AForm const &form);
+		void executeForm(AForm const &form); // this will then call the execute() functions under the Form class
 
 		// Exceptions - must use char *what()
 		class GradeTooHighException : public std::exception {

@@ -6,7 +6,7 @@
 /*   By: zwong <zwong@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/13 16:30:55 by zwong             #+#    #+#             */
-/*   Updated: 2023/07/13 16:30:56 by zwong            ###   ########.fr       */
+/*   Updated: 2023/09/25 15:03:49 by zwong            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,7 @@ class AForm {
 
 		// Functions
 		void beSigned(const Bureaucrat &bureaucrat);
-		void execute(Bureaucrat const &bureaucrat) const;
+		void execute(Bureaucrat const &bureaucrat) const; // this execute() will be caleld by a Bureaucrat
 
 		// Exceptions - must use char *what()
 		class GradeTooHighException : public std::exception {
@@ -73,7 +73,7 @@ class AForm {
 		};
 
 	protected:
-		virtual void execAction(void) const = 0;
+		virtual void execAction(void) const = 0; // after getting execute trigger, this will run. Action is set by derived Forms.
 
 	private:
 		const std::string name_;

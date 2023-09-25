@@ -6,7 +6,7 @@
 /*   By: zwong <zwong@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/13 16:31:05 by zwong             #+#    #+#             */
-/*   Updated: 2023/07/13 16:31:06 by zwong            ###   ########.fr       */
+/*   Updated: 2023/09/25 15:11:18 by zwong            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,5 +35,5 @@ PresidentialPardonForm &PresidentialPardonForm::operator=(const PresidentialPard
 
 void PresidentialPardonForm::execAction() const {
 	// Check executor grade
-	std::cout << "PresidentialPardonForm: " << this->target_ << " has been pardoned by Zaphod Beeblebrox." << std::endl;
+	std::cout << "PresidentialPardonForm: \"" << this->target_ << "\" has been pardoned by Zaphod Beeblebrox." << std::endl;
 }

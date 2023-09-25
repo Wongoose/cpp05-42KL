@@ -6,7 +6,7 @@
 /*   By: zwong <zwong@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/13 15:55:14 by zwong             #+#    #+#             */
-/*   Updated: 2023/07/13 16:15:02 by zwong            ###   ########.fr       */
+/*   Updated: 2023/09/25 15:12:46 by zwong            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,10 @@
 #include "PresidentialPardonForm.hpp"
 
 // Creating Derived Forms from AForm. Execution checking done in AForm.
+// Difference is that each type of Form has an execution
+// Note
+// - Now we have added execution grade for each for form
+// - Each form has it's own result if executed successfully
 int	main(void)
 {
 	std::cout << GREEN << "----- BUREAUCRATS CREATION-----" << RESET << std::endl << std::endl;
